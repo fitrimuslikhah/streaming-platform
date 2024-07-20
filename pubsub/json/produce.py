@@ -10,7 +10,9 @@ def produce():
     p = Producer({
         'bootstrap.servers': 'localhost:19092',  # Assuming you're running this on the same machine as the compose
         'client.id': 'python-producer'
-    })
+    }) 
+
+
 
     # Produce a message
     try:

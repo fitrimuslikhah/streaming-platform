@@ -4,11 +4,14 @@ from config import TOPIC
 
 def consume():
     # Configure the Consumer
+        
     c = Consumer({
-        'bootstrap.servers': 'localhost:19092',  # Assuming you're running this on the same machine as the compose
+        'bootstrap.servers': 'localhost:19092',
         'group.id': 'python-consumer',
-        'auto.offset.reset': 'latest'
+        'auto.offset.reset': 'earliest'
     })
+
+     
 
     # Subscribe to the topic
     c.subscribe([TOPIC])
